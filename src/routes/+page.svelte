@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import { Button } from '$lib/components/ui/button';
+</script>
+
+<h1 class="mt-5 text-center text-3xl font-bold">Welcome to Productive Koala</h1>
+
+<Button>I am a button</Button>
