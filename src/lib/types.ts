@@ -1,5 +1,12 @@
-export type Task = {
+export type HabitStatus = 'active' | 'archived';
+export type DaysStatus = 'unchecked' | 'checked' | 'missed' | 'wont-do';
+
+export type Habit = {
 	id: string;
-	created_at: string;
-	text: string;
+	name: string;
+	status: HabitStatus;
+	days?: {
+		date: string;
+		status: DaysStatus;
+	}[];
 };
