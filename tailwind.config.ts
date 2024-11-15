@@ -68,7 +68,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				main: ['Poppins', 'sans-serif']
+				main: ['Geologica', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {
