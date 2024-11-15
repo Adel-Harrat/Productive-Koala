@@ -2,7 +2,7 @@
 	import Habits from '@/habits/Index.svelte';
 </script>
 
-<div class="grid grid-cols-2 gap-8">
+<div class="mx-auto max-w-lg">
 	<Habits />
 </div>
 
