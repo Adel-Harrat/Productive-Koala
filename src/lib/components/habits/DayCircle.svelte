@@ -10,7 +10,7 @@
 
 {#if status === 'unchecked'}
 	<span
-		class="flex aspect-square size-5 items-center justify-center rounded-full bg-muted *:size-4 *:text-black"
+		class="flex aspect-square size-5 items-center justify-center rounded-full bg-neutral-300 *:size-4 *:text-black dark:bg-neutral-600"
 	>
 	</span>
 {:else if status === 'checked'}
@@ -27,7 +27,7 @@
 	</span>
 {:else if status === 'wont-do'}
 	<span
-		class="flex aspect-square size-5 items-center justify-center rounded-full bg-muted *:size-4 *:text-black"
+		class="flex aspect-square size-5 items-center justify-center rounded-full bg-zinc-300 *:size-4 *:text-black dark:bg-neutral-400"
 	>
 		<WontDoIcon />
 	</span>

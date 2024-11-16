@@ -24,8 +24,8 @@
 </script>
 
 <Dialog.Root bind:open={dialogOpen}>
-	<Dialog.Trigger class="group rounded-lg focus:outline-none ">
-		<PlusIcon classList="text-muted hover:text-foreground group-focus:text-foreground" />
+	<Dialog.Trigger class="group rounded-lg focus:outline-none">
+		<PlusIcon classList="text-muted-foreground hover:text-foreground group-focus:text-foreground" />
 	</Dialog.Trigger>
 	<Dialog.Content>
 		<Dialog.Header>

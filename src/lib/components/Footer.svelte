@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="flex flex-col items-center gap-4 *:text-sm *:font-light *:text-muted md:flex-row md:items-center md:justify-between"
+	class="flex flex-col items-center gap-4 *:text-sm *:font-light *:text-muted-foreground md:flex-row md:items-center md:justify-between"
 >
 	<p>&copy; {new Date().getFullYear()} {PUBLIC_WEBSITE_TITLE}</p>
 

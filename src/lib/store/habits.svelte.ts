@@ -7,8 +7,8 @@ export let habitsStore = $state({
 			return { type: 'error', message: 'Name can not be less than 5 characters.' };
 		}
 
-		if (name.length > 25) {
-			return { type: 'error', message: 'Name can not be more than 5 characters.' };
+		if (name.length > 50) {
+			return { type: 'error', message: 'Name can not be more than 50 characters.' };
 		}
 
 		this.value.push({
