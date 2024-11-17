@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	$inspect($page.url.pathname);
 
 	const isActive = (path: string) => {
 		return $page.url.pathname == path ? 'text-primary' : '';
