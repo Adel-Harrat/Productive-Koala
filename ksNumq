@@ -1,0 +1,59 @@
+[33mcommit 941122f98ec751bb76304ec20d715a83e75192a5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Sun Nov 17 12:49:34 2024 +0100
+
+    Style: change class of remaining tasks paragraph
+
+[33mcommit d7e033f2921feb96b285dcaf0c7b460d8168a244[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Sun Nov 17 12:46:04 2024 +0100
+
+    Add: tasks
+
+[33mcommit 94e406a07f33787c88373e8eeff42b990c556366[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Sun Nov 17 11:18:01 2024 +0100
+
+    Add: nav links with active link
+
+[33mcommit 2aa33ea28a0c495194337b5cdba3eb1665bc38bc[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Sat Nov 16 18:52:14 2024 +0100
+
+    Chore: style miscellaneous things
+
+[33mcommit 6181067ebf339148356cbc54639bb3c4114634f2[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Fri Nov 15 22:22:48 2024 +0100
+
+    Style: add input & improve layout
+
+[33mcommit 1928bd49526aa641077785e16334ba923fbd44c9[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Fri Nov 15 21:49:08 2024 +0100
+
+    Add: dialog to create new habbit
+
+[33mcommit c8b2f611ad03bb87e5631ed316e156ea2fd9ae33[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Fri Nov 15 15:58:05 2024 +0100
+
+    Style: add mobile drawer & responsify header
+
+[33mcommit ca09ce74cca627f7d4fd26b06ff3df2f576c7991[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Fri Nov 15 15:41:52 2024 +0100
+
+    Add header & footer
+
+[33mcommit bf2dcb3683418dc1c20a2bc44b1c96673a3d5d00[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Thu Nov 14 21:30:28 2024 +0100
+
+    Add shadcn-ui & dark mode & poppins font
+
+[33mcommit 94468148c4b27827c917f7188c00dfe2d3d05262[m
+Author: Adel Harrat <a03l.web@gmail.com>
+Date:   Thu Nov 14 19:48:30 2024 +0100
+
+    Initial commit
