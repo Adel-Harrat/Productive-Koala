@@ -110,6 +110,6 @@
 	{/if}
 
 	{#if remainingTasksNumber !== 0}
-		<p class="text-muted">{remainingTasksNumber} tasks remaining</p>
+		<p class="text-muted-foreground/50 dark:text-muted">{remainingTasksNumber} tasks remaining</p>
 	{/if}
 </section>
