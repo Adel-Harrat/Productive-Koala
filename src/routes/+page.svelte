@@ -1,9 +1,3 @@
-<script lang="ts">
-	import Habits from '@/habits/Index.svelte';
-</script>
-
-<div class="mx-auto max-w-xl">
-	<Habits />
-</div>
+<h1>Welcome to productive koala</h1>
 
 <!-- TODO: Replace image logo with unhappy koala when light mode is on -->

@@ -7,6 +7,7 @@
 
 	import { toggleMode } from 'mode-watcher';
 	import { Button } from '@/ui/button';
+	import Links from './Links.svelte';
 </script>
 
 <header class="flex items-center justify-between gap-8">
@@ -22,8 +23,8 @@
 		<MobileDrawer />
 	</div>
 
-	<div class="hidden md:block">
-		<!-- TODO: Add user avatar and dropdown, or add a login button -->
+	<div class="hidden items-center gap-8 md:flex">
+		<Links />
 
 		<Button onclick={toggleMode} variant="outline" size="icon">
 			<Sun
