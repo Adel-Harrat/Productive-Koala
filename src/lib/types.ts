@@ -10,3 +10,15 @@ export type Habit = {
 		status: DaysStatus;
 	}[];
 };
+
+export type Note = {
+	id: string;
+	title: string;
+	content: string;
+};
+
+export type NoteLabel = {
+	id: string;
+	name: string;
+	slug: string;
+};
