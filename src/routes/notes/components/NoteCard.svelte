@@ -1,11 +1,15 @@
 <script lang="ts">
 	import type { Note } from '$lib/types';
+	import * as Card from '$lib/components/ui/card/index.js';
 
 	let { note }: { note: Note } = $props();
 </script>
 
-<article>
-	<h2>{note.title}</h2>
-	<p>{note.content}</p>
-	<p>Created 7 min ago</p>
-</article>
+<Card.Root>
+	<Card.Header>
+		<Card.Title class="text-lg">{note.title}</Card.Title>
+	</Card.Header>
+	<Card.Content class="pt-2 text-sm text-muted-foreground">
+		{note.content}
+	</Card.Content>
+</Card.Root>

@@ -19,4 +19,7 @@
 	<li>
 		<a class={isActive('/notes')} href="/notes">Notes</a>
 	</li>
+	<li>
+		<a class={isActive('/focus')} href="/focus">Focus</a>
+	</li>
 </ul>

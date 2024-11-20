@@ -4,7 +4,8 @@ export const notes = $state<Note[]>([
 	{
 		id: '1',
 		title: 'Hello Svelte',
-		content: 'Welcome to svelte 5 runes store.'
+		content: 'Welcome to svelte 5 runes store.',
+		labelId: 'One'
 	}
 ]);
 

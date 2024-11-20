@@ -4,67 +4,65 @@
 	import { Textarea } from '@/ui/textarea';
 	import * as Select from '@/ui/select';
 	import { Button } from '@/ui/button';
-	import { notesLabels } from '../notes.svelte';
-	import type { NoteLabel } from '$lib/types';
+	import { notes, notesLabels } from '../notes.svelte';
 
-	let selectedLabel = $state<NoteLabel | undefined>(undefined);
+	let { setIsDialogOpenToFalse } = $props();
 
-	// Create a new label
-	let showLabelCreationForm = $state(false);
-	let newLabelName = $state('');
+	let formData = $state({
+		title: '',
+		content: '',
+		labelId: ''
+	});
 
-	function createLabel() {
-		// TODO: Add a validation
-		if (newLabelName.length < 5 || newLabelName.length > 15) return;
+	let error = $state('');
 
-		notesLabels.push({
-			id: crypto.randomUUID(),
-			name: newLabelName,
-			slug: newLabelName.toLowerCase().replace(/ /g, '-')
-		});
-		showLabelCreationForm = false;
-		newLabelName = '';
+	function handleSubmit(event: Event) {
+		// Form validation
+		// TODO: Add proper validation
+		if (!formData.title || !formData.content || !formData.labelId) {
+			error = 'All fields are required';
+			return;
+		}
+
+		// Form is valid
+		notes.push({ id: crypto.randomUUID(), ...formData });
+		setIsDialogOpenToFalse();
 	}
 </script>
 
-{#if !showLabelCreationForm}
-	<form class="flex flex-col gap-6">
-		<div class="space-y-2">
-			<Label for="title">Title</Label>
-			<Input id="title" />
-		</div>
+<form class="flex flex-col gap-6" onsubmit={handleSubmit}>
+	<div class="space-y-2">
+		<Label for="title">Title</Label>
+		<Input id="title" bind:value={formData.title} />
+	</div>
 
-		<div class="space-y-2">
-			<Label for="content">Content</Label>
-			<Textarea id="content" />
-		</div>
+	<div class="space-y-2">
+		<Label for="content">Content</Label>
+		<Textarea id="content" bind:value={formData.content} />
+	</div>
 
-		<div class="flex items-center justify-between gap-4">
-			<!-- Label selection -->
-			<Select.Root type="single" bind:value={selectedLabel}>
-				<Select.Trigger>
-					{selectedLabel ? selectedLabel.name : 'Select a label'}
-				</Select.Trigger>
-				<Select.Content>
-					{#each notesLabels as label (label.id)}
-						<Select.Item value={label.id}>
-							{label.name}
-						</Select.Item>
-					{/each}
-				</Select.Content>
-			</Select.Root>
+	<Select.Root type="single" bind:value={formData.labelId}>
+		<Select.Trigger class="w-1/2">
+			{formData.labelId
+				? notesLabels.find((label) => label.id === formData.labelId)?.name
+				: 'Select a label'}
+		</Select.Trigger>
+		<Select.Content>
+			{#each notesLabels as label (label.id)}
+				<Select.Item value={label.id}>
+					{label.name}
+				</Select.Item>
+			{/each}
+		</Select.Content>
+	</Select.Root>
 
-			<!-- Label creation -->
-			<Button variant="link" onclick={() => (showLabelCreationForm = true)}>Create a label?</Button>
+	{#if error}
+		<div class="flex justify-center text-sm font-bold text-red-500">
+			{error}
 		</div>
+	{/if}
 
-		<div class="flex justify-end">
-			<Button class="flex-1">Submit</Button>
-		</div>
-	</form>
-{:else}
-	<form class="flex items-center justify-between gap-4">
-		<Input bind:value={newLabelName} placeholder="Label name" />
-		<Button type="submit" onclick={createLabel}>Add and Close</Button>
-	</form>
-{/if}
+	<div class="flex justify-end">
+		<Button type="submit" class="flex-1">Submit</Button>
+	</div>
+</form>

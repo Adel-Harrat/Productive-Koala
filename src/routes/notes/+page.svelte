@@ -3,10 +3,10 @@
 	import Sidebar from './components/Sidebar.svelte';
 </script>
 
-<div>
+<div class="grid grid-cols-4 gap-8">
 	<Sidebar />
 
-	<main>
+	<main class="col-span-3">
 		<NoteList />
 	</main>
 </div>

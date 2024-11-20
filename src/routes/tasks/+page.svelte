@@ -6,6 +6,7 @@
 	import { Input } from '@/ui/input';
 	import Ellipsis from 'lucide-svelte/icons/ellipsis';
 	import { slide } from 'svelte/transition';
+	import CirclePlay from 'lucide-svelte/icons/circle-play';
 
 	let newTask = $state('');
 
@@ -58,7 +59,7 @@
 	});
 </script>
 
-<section class="mx-auto flex max-w-xl flex-col gap-8">
+<section class="mx-auto flex w-full max-w-xl flex-col gap-8">
 	<h1 class="text-center text-3xl font-extrabold tracking-tight">Productivity, Simplified</h1>
 
 	<form class="flex items-center justify-between gap-4" onsubmit={addNewTask}>
@@ -84,6 +85,10 @@
 
 						<span class="group-has-[:checked]:line-through">{task.name}</span>
 					</label>
+
+					<div>
+						<CirclePlay />
+					</div>
 
 					<div class="grid place-items-center">
 						<DropdownMenu.Root>

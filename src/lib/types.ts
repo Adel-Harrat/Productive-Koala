@@ -15,6 +15,7 @@ export type Note = {
 	id: string;
 	title: string;
 	content: string;
+	labelId: string;
 };
 
 export type NoteLabel = {

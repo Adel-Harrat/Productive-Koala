@@ -18,7 +18,7 @@
 <div class="container flex min-h-dvh flex-col gap-6 py-6">
 	<Header />
 
-	<main class="flex-1">
+	<main class="grid flex-1">
 		{@render children()}
 	</main>
 
