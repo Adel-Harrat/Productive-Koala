@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { env } from '$env/dynamic/public';
 	import { Button } from '@/ui/button';
+	import { PUBLIC_WEBSITE_TITLE } from '$env/static/public';
 
 	let timer = $state(1499);
 	let clock = $state('');
@@ -37,6 +39,8 @@
 			timer = 1499;
 		}
 	});
+
+	$effect(() => () => (document.title = PUBLIC_WEBSITE_TITLE));
 </script>
 
 <svelte:head>

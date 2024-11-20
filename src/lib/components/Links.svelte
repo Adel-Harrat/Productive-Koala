@@ -8,9 +8,6 @@
 
 <ul class="flex items-center gap-4">
 	<li>
-		<a class={isActive('/')} href="/">Home</a>
-	</li>
-	<li>
 		<a class={isActive('/habits')} href="/habits">Habits</a>
 	</li>
 	<li>
